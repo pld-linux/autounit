@@ -32,7 +32,7 @@ w ich projektach ale aktualnie nie u¿ywaj±cych programów testuj±cych.
 
 %build
 rm -f missing
-libtoolize --copy --force
+%{__libtoolize}
 autoheader
 aclocal
 %{__autoconf}
