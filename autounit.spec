@@ -33,8 +33,8 @@ w ich projektach ale aktualnie nie u¿ywaj±cych programów testuj±cych.
 %build
 rm -f missing
 %{__libtoolize}
-autoheader
-aclocal
+%{__autoheader}
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
