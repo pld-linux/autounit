@@ -16,6 +16,7 @@ BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	glib-devel
 BuildRequires:	libtool
+BuildRequires:	texinfo
 Requires(post,preun):	/sbin/ldconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
