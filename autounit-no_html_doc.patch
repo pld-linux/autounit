@@ -1,0 +1,18 @@
+--- autounit-0.10.2/doc/Makefile.am~	Mon Sep 17 18:21:49 2001
++++ autounit-0.10.2/doc/Makefile.am	Fri Sep 28 06:29:08 2001
+@@ -10,15 +10,3 @@
+ 			au-concept-index.texi
+ 
+ EXTRA_DIST = $(autounit_TEXINFOS)
+-docdir = $(prefix)/doc/$(PACKAGE)-$(VERSION)
+-doc_DATA = autounit.html
+-
+-
+-SUFFIXES = .html
+-html_docs = autounit.html
+-autounit.html: autounit.info
+-.texi.html:
+-	$(MAKEINFO) --html $<
+-
+-.PHONY: html
+-html: version.texi $(html_docs)
