@@ -1,0 +1,11 @@
+--- autounit-0.15.2.orig/Makefile.am	2002-04-23 00:50:08.000000000 +0200
++++ autounit-0.15.2/Makefile.am	2004-08-10 21:21:12.114485752 +0200
+@@ -20,7 +20,7 @@
+ autoconfdir = $(prefix)/share/aclocal
+ autoconf_DATA = autounit.m4
+ 
+-pkgconfigdir = $(prefix)/lib/pkgconfig
++pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = autounit.pc
+ 
+ html:
