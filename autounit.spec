@@ -9,6 +9,7 @@ Source0:	http://www.recursism.com/files/%{name}-%{version}.tar.gz
 # Source0-md5:	ce0469ca0a9e421670918fcaf52fd8b6
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-no_html_doc.patch
+Patch2:		%{name}-Makefile.patch
 URL:		http://www.recursism.com/web/index.php?action=page&name=autounit
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -32,6 +33,7 @@ projektach, ale aktualnie nie u¿ywaj±cych programów testuj±cych.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 cp -f /usr/share/automake/config.sub .
