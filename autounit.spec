@@ -34,6 +34,7 @@ projektach, ale aktualnie nie u¿ywaj±cych programów testuj±cych.
 %patch1 -p1
 
 %build
+cp -f /usr/share/automake/config.sub .
 %{__gettextize}
 %{__libtoolize}
 %{__autoheader}
