@@ -2,7 +2,7 @@ Summary:	GNU Autounit - unit testing frameworks for Autoconf
 Summary(pl):	GNU Autoconf - szkielet do testów dla Autoconfa
 Name:		autounit
 Version:	0.15.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://www.recursism.com/files/%{name}-%{version}.tar.gz
