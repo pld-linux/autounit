@@ -1,7 +1,7 @@
 Summary:	GNU autoconf - source configuration tools
 Summary(pl):	GNU autoconf - narzêdzie do automatycznego konfigurowania ¼róde³
 Name:		autounit
-Version:	0.10
+Version:	0.10.1
 Release:	1
 License:	GPL
 Group:		Development/Tools
@@ -11,7 +11,10 @@ Group(pl):	Programowanie/Narzêdzia
 Source0:	http://www.recursism.com/projects/autounit/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
 URL:		http://www.recursism.com/projects/autounit/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	glib-devel
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,6 +32,12 @@ w ich projektach ale aktualnie nie u¿ywaj±cych programów testuj±cych.
 %patch -p1
 
 %build
+rm -f missing
+libtoolize --copy --force
+autoheader
+aclocal
+autoconf
+automake -a -c
 %configure
 %{__make}
 
