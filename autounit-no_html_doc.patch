@@ -1,6 +1,6 @@
---- autounit-0.10.2/doc/Makefile.am~	Mon Sep 17 18:21:49 2001
-+++ autounit-0.10.2/doc/Makefile.am	Fri Sep 28 06:29:08 2001
-@@ -10,15 +10,3 @@
+--- autounit-0.15.2/doc/Makefile.am.orig	2002-04-23 00:50:08.000000000 +0200
++++ autounit-0.15.2/doc/Makefile.am	2003-11-09 18:36:42.772239904 +0100
+@@ -10,18 +10,3 @@
  			au-concept-index.texi
  
  EXTRA_DIST = $(autounit_TEXINFOS)
@@ -12,7 +12,10 @@
 -html_docs = autounit.html
 -autounit.html: autounit.info
 -.texi.html:
--	$(MAKEINFO) --html $<
+-	$(MAKEINFO) -I $(top_srcdir)/doc --html $<
 -
 -.PHONY: html
 -html: version.texi $(html_docs)
+-
+-clean-local:
+-	if test -d autounit ; then rm -rf autounit ; fi

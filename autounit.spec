@@ -1,19 +1,21 @@
 Summary:	GNU Autounit - unit testing frameworks for Autoconf
 Summary(pl):	GNU Autoconf - szkielet do testów dla Autoconfa
 Name:		autounit
-Version:	0.10.2
-Release:	2
+Version:	0.15.2
+Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://www.recursism.com/files/%{name}-%{version}.tar.gz
-# Source0-md5:	85ba614a10c789644a7ee986c496dcb3
+# Source0-md5:	ce0469ca0a9e421670918fcaf52fd8b6
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-no_html_doc.patch
 URL:		http://www.recursism.com/web/index.php?action=page&name=autounit
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	glib-devel
 BuildRequires:	libtool
+Requires(post,preun):	/sbin/ldconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,7 +34,7 @@ projektach, ale aktualnie nie u¿ywaj±cych programów testuj±cych.
 %patch1 -p1
 
 %build
-rm -f missing
+%{__gettextize}
 %{__libtoolize}
 %{__autoheader}
 %{__aclocal}
@@ -51,14 +53,22 @@ rm -rf $RPM_BUILD_ROOT
 rm -rf $RPM_BUILD_ROOT
 
 %post
+/sbin/ldconfig
 [ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %postun
+/sbin/ldconfig
 [ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README
+%doc AUTHORS BUGS ChangeLog NEWS README TODO
+%attr(755,root,root) %{_libdir}/libau-c-unit.so.*.*.*
+%attr(755,root,root) %{_libdir}/libau-c-unit.so
+%{_libdir}/libau-c-unit.la
 %{_libdir}/libau-c-unit.a
-%{_includedir}/c-unit
-%{_infodir}/*info*
+%{_includedir}/autounit
+%{_datadir}/guile/autounit
+%{_pkgconfigdir}/*.pc
+%{_aclocaldir}/*.m4
+%{_infodir}/autounit.info*
