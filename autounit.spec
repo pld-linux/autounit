@@ -23,7 +23,7 @@ but do not currently use a unit testing framework.
 %description -l pl
 Celem programu GNU Autounit jest dostarczenie popularnego systemu
 testów dla developerów aplikacji ju¿ u¿ywaj±cych programu GNU Autoconf
-w ich projektach ale aktualnie nie u¿ywaj±cych programów testuj±cych.
+w ich projektach, ale aktualnie nie u¿ywaj±cych programów testuj±cych.
 
 %prep
 %setup -q
