@@ -11,6 +11,7 @@ Group(pl):	Programowanie/Narzêdzia
 Source0:	http://www.recursism.com/projects/autounit/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
 URL:		http://www.recursism.com/projects/autounit/
+BuildRequires:	glib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -52,4 +53,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %{_libdir}/libau-c-unit.a
 %{_includedir}/c-unit
-%{_inforid}/*info*
+%{_infodir}/*info*
