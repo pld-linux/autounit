@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://www.recursism.com/projects/autounit/%{name}-%{version}.tar.gz
+# Source0-md5:	85ba614a10c789644a7ee986c496dcb3
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-no_html_doc.patch
 URL:		http://www.recursism.com/projects/autounit/
