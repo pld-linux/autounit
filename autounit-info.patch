@@ -1,0 +1,14 @@
+--- autounit-0.10/doc/autounit.texi~	Sun May  6 01:48:38 2001
++++ autounit-0.10/doc/autounit.texi	Sun May 20 11:47:56 2001
+@@ -8,9 +8,9 @@
+ 
+ @include version.texi
+ 
+-@dircategory Programming
++@dircategory Printing Tools:
+ @direntry
+-* autounit: (autounit).     GNU Autounit: Unit Testing Framework
++* autounit: (autounit).			GNU Autounit: Unit Testing Framework
+ @end direntry
+ 
+ @ifinfo
