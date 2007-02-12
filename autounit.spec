@@ -1,5 +1,5 @@
 Summary:	GNU Autounit - unit testing frameworks for Autoconf
-Summary(pl):	GNU Autoconf - szkielet do testów dla Autoconfa
+Summary(pl.UTF-8):   GNU Autoconf - szkielet do testÃ³w dla Autoconfa
 Name:		autounit
 Version:	0.15.2
 Release:	2
@@ -25,10 +25,10 @@ GNU Autounit's goal is to provide a common unit testing framework for
 application developers who use GNU Autoconf already in their projects
 but do not currently use a unit testing framework.
 
-%description -l pl
-Celem programu GNU Autounit jest dostarczenie wspólnego systemu testów
-dla twórców aplikacji ju¿ u¿ywaj±cych programu GNU Autoconf w swoich
-projektach, ale aktualnie nie u¿ywaj±cych programów testuj±cych.
+%description -l pl.UTF-8
+Celem programu GNU Autounit jest dostarczenie wspÃ³lnego systemu testÃ³w
+dla twÃ³rcÃ³w aplikacji juÅ¼ uÅ¼ywajÄ…cych programu GNU Autoconf w swoich
+projektach, ale aktualnie nie uÅ¼ywajÄ…cych programÃ³w testujÄ…cych.
 
 %prep
 %setup -q
