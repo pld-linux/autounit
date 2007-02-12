@@ -1,5 +1,5 @@
 Summary:	GNU Autounit - unit testing frameworks for Autoconf
-Summary(pl.UTF-8):   GNU Autoconf - szkielet do testów dla Autoconfa
+Summary(pl.UTF-8):	GNU Autoconf - szkielet do testów dla Autoconfa
 Name:		autounit
 Version:	0.15.2
 Release:	2
