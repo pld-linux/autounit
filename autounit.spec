@@ -13,7 +13,7 @@ Patch2:		%{name}-Makefile.patch
 URL:		http://www.recursism.com/web/index.php?action=page&name=autounit
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib-devel
 BuildRequires:	libtool
 BuildRequires:	texinfo
